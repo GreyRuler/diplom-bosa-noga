@@ -25,7 +25,7 @@ export const CatalogList = () => {
 	if (error) return (
 		<span>{error}</span>
 	)
-	console.log(catalog)
+
 	return (
 		<div className="row">{
 			catalog.map(o => <CatalogItem item={o} key={o.id}/>)

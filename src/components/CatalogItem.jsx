@@ -1,8 +1,8 @@
+import {Link} from "react-router-dom";
+import {formatPrice} from "../utils/formatPrice";
+
 export const CatalogItem = ({item}) => {
-    const price = new Intl.NumberFormat(
-        'ru-RU',
-        {currency: 'RUB'}
-    ).format(item.price)
+    const price = formatPrice(item.price)
 
     return (
         <div className="col-4">
@@ -12,7 +12,7 @@ export const CatalogItem = ({item}) => {
                 <div className="card-body">
                     <p className="card-text">{item.title}</p>
                     <p className="card-text">{price} руб.</p>
-                    <a href="/products/1.html" className="btn btn-outline-primary">Заказать</a>
+                    <Link to={`/catalog/product/${item.id}`} className="btn btn-outline-primary">Заказать</Link>
                 </div>
             </div>
         </div>

@@ -5,7 +5,8 @@ const catalogSlice = createSlice({
     initialState: {
         value: {
             categoryId: undefined,
-            offset: 6,
+            offset: 0,
+            q: '',
             catalog: [],
             loading: false,
             error: null,
@@ -15,11 +16,16 @@ const catalogSlice = createSlice({
     reducers: {
         catalogChangeId: (state, action) => {
             state.value.categoryId = action.payload
-            state.value.offset = 6
+            state.value.offset = 0
             state.value.catalog = []
         },
         catalogChangeOffset: (state) => {
             state.value.offset += 6
+        },
+        catalogChangeQ: (state, action) => {
+            state.value.q = action.payload
+            state.value.offset = 0
+            state.value.catalog = []
         },
         catalogRequest: (state) => {
             state.value = {
@@ -50,7 +56,8 @@ export const {
     catalogRequest,
     catalogSuccess,
     catalogChangeId,
-    catalogChangeOffset
+    catalogChangeOffset,
+    catalogChangeQ
 } = catalogSlice.actions
 
 export default catalogSlice.reducer

@@ -1,10 +1,13 @@
 import { Fragment } from 'react';
 import {CatalogWidget} from "../CatalogWidget";
+import {Search} from "../Search";
 
 export const Catalog = () => {
 	return (
 		<Fragment>
-			<CatalogWidget/>
+			<CatalogWidget>
+				<Search/>
+			</CatalogWidget>
 		</Fragment>
 	)
 }
