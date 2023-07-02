@@ -6,7 +6,7 @@ export const Menu = () => {
 	return (
 		<ul className="navbar-nav mr-auto">
 			<li className="nav-item">
-				<NavLink to='/' className={classnamesMenuItem}>
+				<NavLink to='/home' className={classnamesMenuItem}>
 					Главная
 				</NavLink>
 			</li>

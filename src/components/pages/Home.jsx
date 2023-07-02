@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import {CatalogWidget} from "../CatalogWidget";
 
 export const Home = () => {
 	return (
@@ -12,15 +13,7 @@ export const Home = () => {
 					<span></span>
 				</div>
 			</section>
-			<section className="catalog">
-				<h2 className="text-center">Каталог</h2>
-				<div className="preloader">
-					<span></span>
-					<span></span>
-					<span></span>
-					<span></span>
-				</div>
-			</section>
+			<CatalogWidget/>
 		</Fragment>
 	)
 }
