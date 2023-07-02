@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/diplom-bosa-noga/static/css/main.1a1dfc05.css",
+    "main.js": "/diplom-bosa-noga/static/js/main.a5dd7049.js",
+    "static/js/787.4da661c3.chunk.js": "/diplom-bosa-noga/static/js/787.4da661c3.chunk.js",
+    "static/media/banner.jpg": "/diplom-bosa-noga/static/media/banner.5fd2c60d58a8686daee0.jpg",
+    "static/media/footer-sprite.png": "/diplom-bosa-noga/static/media/footer-sprite.b3d5697aeb76ce9f8002.png",
+    "index.html": "/diplom-bosa-noga/index.html",
+    "main.1a1dfc05.css.map": "/diplom-bosa-noga/static/css/main.1a1dfc05.css.map",
+    "main.a5dd7049.js.map": "/diplom-bosa-noga/static/js/main.a5dd7049.js.map",
+    "787.4da661c3.chunk.js.map": "/diplom-bosa-noga/static/js/787.4da661c3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1a1dfc05.css",
+    "static/js/main.a5dd7049.js"
+  ]
+}
