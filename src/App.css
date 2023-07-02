@@ -178,7 +178,18 @@ section {
 }
 
 .catalog-item-card {
+    height: calc(100% - 1em);
     margin-bottom: 1em;
+}
+
+.catalog-item-card .card-header-img {
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto
+}
+
+.catalog-item-card .card-body {
+    flex: none;
 }
 
 .catalog-item-size {

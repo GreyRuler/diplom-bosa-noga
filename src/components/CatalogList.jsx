@@ -5,30 +5,32 @@ import {catalogChangeId} from "../reducers/catalog/slice";
 import {CatalogItem} from "./CatalogItem";
 
 export const CatalogList = () => {
-	const {categoryId} = useParams()
-	const dispatch = useDispatch()
-	const {catalog, loading, error} = useSelector(state => state.catalogReducer.value)
+    const {categoryId} = useParams()
+    const dispatch = useDispatch()
+    const {catalog, loading, error} = useSelector(state => state.catalogReducer.value)
 
-	useEffect(() => {
-		dispatch(catalogChangeId(categoryId))
-	}, [dispatch, categoryId])
+    useEffect(() => {
+        dispatch(catalogChangeId(categoryId))
+    }, [dispatch, categoryId])
 
-	if (loading) return (
-		<div className="preloader">
-			<span></span>
-			<span></span>
-			<span></span>
-			<span></span>
-		</div>
-	)
+    if (loading) return (
+        <div className="preloader">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    )
 
-	if (error) return (
-		<span>{error}</span>
-	)
+    if (error) return (
+        <span>{error}</span>
+    )
 
-	return (
-		<div className="row">{
-			catalog.map(o => <CatalogItem item={o} key={o.id}/>)
-		}</div>
-	)
+    return (
+        <div className="row">{
+            !catalog.length
+                ? <span className='m-auto'>Нет результатов</span>
+                : catalog.map(o => <CatalogItem item={o} key={o.id}/>)
+        }</div>
+    )
 }
